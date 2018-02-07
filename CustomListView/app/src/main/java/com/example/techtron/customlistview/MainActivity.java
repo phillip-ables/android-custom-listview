@@ -2,6 +2,7 @@ package com.example.techtron.customlistview;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
     int [] IMAGES = { R.drawable.bigie, R.drawable.gandhi, R.drawable.cobain, R.drawable.musk, R.drawable.swazey, R.drawable.patrick, R.drawable.dog};
@@ -13,6 +14,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        
+        ListView listView=(ListView)findViewById(R.id.listView);
     }
 }
