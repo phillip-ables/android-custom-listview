@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     int[] IMAGES = { R.drawable.bigie, R.drawable.ghandi, R.drawable.cobain, R.drawable.musk, R.drawable.swazey, R.drawable.patrick, R.drawable.dog};
@@ -37,7 +39,17 @@ public class MainActivity extends AppCompatActivity {
         }
         @Override
         public View getView(int i, View view, ViewGroup viewGroup) {
-            return null;
+            view = getLayoutInflater().inflate(R.layout.customlayout, null);
+
+            ImageView imageView = (ImageView)view.findViewById(R.id.imageView);
+            TextView textView_name = (TextView)view.findViewById(R.id.textView_name);
+            TextView textView_description = (TextView)view.findViewById(R.id.textView_description);
+
+            imageView.setImageResource(IMAGES[i]);
+            textView_name.setText(NAMES[i]);
+            textView_description.setText(DESCRIPTIONS[i]);
+
+            return view;
         }
 
     }
