@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return 0;
+            return IMAGES.length;
         }
         @Override
         public Object getItem(int i) {
